@@ -1,7 +1,7 @@
 <?php
     // Capturamos los datos enviados desde el formulario
-    $nombre = $_POST['nombre'];
-    $correo = $_POST['correo'];
+    $nombre = htmlspecialchars($_POST['nombre']);
+    $correo = htmlspecialchars($_POST['correo']);
 
     // Verificamos si alguno de los campos está vacío
     if (empty($nombre) || empty($correo)) {
@@ -24,7 +24,7 @@
     // Espacio adicional y un botón para regresar a la página anterior
     echo '<br>
     <div style="text-align: center;"> <!-- Centramos el botón de regreso -->
-    <form action="Practica2U2.html">
+    <form action="index.html">
     <input type="submit" value="Listo"> <!-- Botón para volver a la página anterior -->
     </form>
     </div>';
