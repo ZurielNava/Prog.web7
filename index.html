@@ -1,75 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Se establece la codificación de caracteres para manejar correctamente los caracteres especiales -->
     <meta charset="UTF-8">
-    <!-- Título de la página que se mostrará en la pestaña del navegador -->
-    <title>Página Web Básica</title>
+    <title>Formulario con JavaScript</title>
 
     <style>
-        /* Estilo general para el cuerpo de la página */
+        /* Estilos para la página */
         body {
-            font-family: Arial, sans-serif; /* Usamos Arial como fuente principal */
-            background-color: #f0f0f0; /* Color de fondo claro para un aspecto limpio */
-            color: #333; /* Color del texto para buena legibilidad */
-            text-align: center; /* Centramos el texto en la página */
-            margin: 0; /* Sin márgenes por defecto */
-            padding: 0; /* Sin relleno por defecto */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
         }
-
-        /* Estilo para el encabezado principal */
         h1 {
-            color: #0080ff; /* Un azul agradable para el título */
+            color: #0080ff;
         }
         h4 {
-            color: maroon; /* Un color marrón para el subtítulo */
-            font-weight: bold; /* Hacemos el subtítulo un poco más destacado */
+            color: maroon;
+            font-weight: bold;
         }
-
-        /* Estilo para el contenedor que alberga la imagen y el texto */
-        .container {
-            display: flex; /* Usamos flexbox para un mejor control del diseño */
-            align-items: center; /* Centramos verticalmente los elementos dentro del contenedor */
-            justify-content: center; /* Centramos el contenedor en la página */
-        }
-
-        /* Estilo para el formulario */
         form {
-            margin: 20px auto; /* Un margen superior de 20px y centramos el formulario */
-            padding: 10px; /* Relleno interno de 10px para un poco de espacio */
-            background-color: #fff; /* Color de fondo blanco para el formulario */
-            border-radius: 8px; /* Esquinas redondeadas para un diseño más suave */
-            width: 300px; /* Ancho fijo de 300px para el formulario */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad al formulario */
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- imagenes -->
-        <img src="img/logo.jpg" width="150" height="150" alt="Logo">
-        <img src="img/Tecnologico_Nacional_de_Mexico.svg.png" width="400" height="150" alt="Tecnológico Nacional de México">
-    </div>
+    <h1>Formulario de Prueba</h1>
+    <h4>Introduce tus datos:</h4>
 
-    
-    <h1>Práctica de laboratorio U2</h1>
-    <h4>Esta es una página simple para mostrar el uso de HTML, CSS y PHP.</h4>
+    <!-- Formulario para capturar los datos del usuario -->
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
 
-    <form action="Datos.php" method="GET">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required><br>
-    
-    <label for="correo">Correo:</label>
-    <input type="email" id="correo" name="correo" required><br>
-    
-    <input type="submit" value="Enviar">
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+        <input type="submit" value="Enviar">
     </form>
 
+    <!-- Div para mostrar los resultados -->
+    <div id="resultado"></div>
 
-
-    <!-- Información -->
-    <h3>NAVA Hernandez Pablo Zuriel</h3>
-    <h4>Ingeniería en sistemas computacionales</h4>
+    <script src="script.js"></script> <!-- Enlazamos el archivo JavaScript -->
 </body>
 </html>
