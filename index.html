@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Web Básica</title>
+
+    <style>
+        /* Estilo general para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #0080ff;
+        }
+
+        h4 {
+            color: maroon;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #0080ff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+    </style>
+    
+    <script>
+        function enviarDatos(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+
+            // Capturar los datos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+
+            // Redirigir a otra página con los datos en la URL
+            window.location.href = `destino.html?nombre=${encodeURIComponent(nombre)}&correo=${encodeURIComponent(correo)}`;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <img src="img/logo.jpg" width="150" height="150" alt="Logo">
+        <img src="img/Tecnologico_Nacional_de_Mexico.svg.png" width="400" height="150" alt="Tecnológico Nacional de México">
+    </div>
+
+    <h1>Práctica de laboratorio U2</h1>
+    <h4>Esta es una página simple para mostrar el uso de HTML, CSS y JavaScript.</h4>
+
+    <!-- Formulario para capturar los datos del usuario -->
+    <form onsubmit="enviarDatos(event)">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h3>NAVA Hernandez Pablo Zuriel</h3>
+    <h4>Ingeniería en sistemas computacionales</h4>
+</body>
+</html>

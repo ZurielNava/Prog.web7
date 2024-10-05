@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información Recibida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Información Recibida:</h2>
+    <div id="info"></div>
+
+    <script>
+        // Obtener los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre = urlParams.get('nombre');
+        const correo = urlParams.get('correo');
+
+        // Mostrar la información en la página
+        if (nombre && correo) {
+            document.getElementById('info').innerHTML = `
+                <p><strong>Nombre:</strong> ${nombre}</p>
+                <p><strong>Correo:</strong> ${correo}</p>
+            `;
+        } else {
+            document.getElementById('info').innerHTML = '<p>No se recibieron datos.</p>';
+        }
+    </script>
+</body>
+</html>
